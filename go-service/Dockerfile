@@ -5,10 +5,10 @@ WORKDIR /app
 # Install gcc and build tools for CGO (required by go-sqlite3)
 RUN apk add --no-cache gcc musl-dev sqlite-dev
 
-# Copy go mod files
+# Copy go mod file
 COPY go.mod go.sum ./
 
-# Download dependencies
+# Download dependencies and generate go.sum
 RUN go mod download
 
 # Copy source code

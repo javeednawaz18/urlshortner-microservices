@@ -1,5 +1,3 @@
-name: urlshortner-microservices
-
 services:
   redis:
     image: redis:8-alpine
